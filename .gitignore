@@ -30,6 +30,8 @@ tests/tmp-*
 # Cache
 .cache/
 *.cache
+__pycache__/
+*.pyc
 .gocache/
 .gomod/
 
@@ -68,6 +70,9 @@ cmd/status/status
 /status
 /analyze
 mole-analyze
+# PyQt6 menu bar app artifacts
+.venv-menubar/
+dist/
 # Go binaries
 bin/analyze-go
 bin/status-go

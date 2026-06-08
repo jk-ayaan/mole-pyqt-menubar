@@ -66,6 +66,25 @@ mo --help                    # Show help
 mo --version                 # Show installed version
 ```
 
+### Optional PyQt6 Menu Bar App
+
+This fork includes a small PyQt6 menu bar wrapper for macOS. It keeps Mole's
+CLI as the source of truth, shows live `mo status --json` health in the menu
+bar, opens common Mole commands in Terminal, and includes a login autostart
+toggle backed by a user LaunchAgent.
+
+```bash
+# From this repository
+brew install go              # Needed for status/analyze helper binaries
+./scripts/install-menubar-app.sh --autostart
+```
+
+The installer creates `~/Applications/Mole Menu.app`, builds Mole's Go helper
+binaries when Go is available, creates a local PyQt6 virtual environment, and
+launches the app without a Dock icon. The original Mole MIT license is
+preserved in `LICENSE`; extra dependency notes are in
+`THIRD_PARTY_NOTICES.md`.
+
 **Preview safely**
 
 ```bash
